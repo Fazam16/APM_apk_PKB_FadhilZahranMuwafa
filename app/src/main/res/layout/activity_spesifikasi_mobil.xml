@@ -550,7 +550,6 @@
         android:layout_marginBottom="-8dp"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/permanentmarker_regular"
-        android:onClick="pindahDashboard"
         android:text="S e w a"
         android:textColor="@color/black"
         android:textSize="20dp"

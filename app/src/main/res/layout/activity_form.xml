@@ -47,17 +47,17 @@
                         android:paddingStart="10dp">
 
                         <ImageView
-                            android:id="@+id/kembali"
+                            android:id="@+id/back"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_baseline_arrow_back_ios_24"
-                            />
+                            android:onClick="pindahSpesifikasi"
+                            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
-                            android:layout_toEndOf="@id/kembali"
+                            android:layout_toEndOf="@id/back"
                             android:fontFamily="@font/poppins_medium"
                             android:text="@string/form_penyewaan"
                             android:textColor="@color/black"
@@ -74,7 +74,10 @@
                         android:layout_marginEnd="@dimen/tepi"
                         android:background="@drawable/form"
                         android:elevation="20dp"
-                        android:padding="@dimen/tepi">
+                        android:paddingStart="@dimen/tepi"
+                        android:paddingEnd="@dimen/tepi"
+                        android:paddingBottom="@dimen/tepi"
+                        android:paddingTop="30dp">
 
                         <EditText
                             android:id="@+id/namaPenyewa"
@@ -144,7 +147,7 @@
                             android:paddingEnd="10dp"
                             android:paddingBottom="5dp"
                             android:text="@string/merk_mobil"
-                            android:textSize="18dp" />
+                            android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/hargaSewa"
@@ -159,7 +162,7 @@
                             android:paddingEnd="10dp"
                             android:paddingBottom="5dp"
                             android:text="@string/harga_sewa"
-                            android:textSize="18dp" />
+                            android:textSize="18sp" />
 
                         <EditText
                             android:id="@+id/lamaSewa"
@@ -178,6 +181,7 @@
                             android:paddingBottom="5dp" />
 
                         <Button
+                            android:id="@+id/tanggalSewa"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/lamaSewa"
@@ -187,7 +191,47 @@
                             android:text="Tanggal Mulai Sewa"
                             android:textAllCaps="false"
                             android:textColor="#8A8A8A"
-                            android:textSize="17dp" />
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/uangPembayaran"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tanggalSewa"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/fill_form"
+                            android:fontFamily="@font/poppins_medium"
+                            android:hint="@string/nik"
+                            android:paddingStart="10dp"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="5dp" />
+
+                        <Button
+                            android:id="@+id/sewa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/uangPembayaran"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="25dp"
+                            android:background="@drawable/button_sewa"
+                            android:elevation="@dimen/tepi"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="s e w a"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/cancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sewa"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/border_radius"
+                            android:elevation="@dimen/tepi"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="c a n c e l"
+                            android:textStyle="bold" />
 
                     </RelativeLayout>
 

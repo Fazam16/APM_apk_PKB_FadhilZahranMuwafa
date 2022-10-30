@@ -38,6 +38,7 @@ public class Spesifikasi_Mobil extends AppCompatActivity {
         ketBahanBakar = findViewById(R.id.ketGasStation);
         ketMuatanKursi = findViewById(R.id.ketKursi);
         ketTanggalPembuatan = findViewById(R.id.ketTahun);
+        pindah = findViewById(R.id.buttonLanjut);
 
 
         Bundle bundle = getIntent().getExtras();
@@ -65,6 +66,16 @@ public class Spesifikasi_Mobil extends AppCompatActivity {
 
         bintang(merk);
         rating(merk);
+
+        pindah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent pindahLokasi = new Intent(Spesifikasi_Mobil.this, Form.class);
+                pindahLokasi.putExtra("harga", harga);
+                pindahLokasi.putExtra("merk", merk);
+                startActivity(pindahLokasi);
+            }
+        });
     }
 
     public void rating(String merkMobil) {
@@ -114,7 +125,7 @@ public class Spesifikasi_Mobil extends AppCompatActivity {
     }
 
     public void pindahDashboard(View view) {
-        Intent pindahForm = new Intent(Spesifikasi_Mobil.this, Form.class);
-        startActivity(pindahForm);
+        Intent pindah = new Intent(Spesifikasi_Mobil.this, Dashboard.class);
+        startActivity(pindah);
     }
 }
