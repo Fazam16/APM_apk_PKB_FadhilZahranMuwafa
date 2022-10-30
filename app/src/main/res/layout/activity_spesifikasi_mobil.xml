@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Spesifikasi_Mobil">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/latar_belakang">
+
+                    <ImageView
+                        android:layout_width="270dp"
+                        android:layout_height="270dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="-100dp"
+                        android:src="@drawable/bulat" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="36dp"
+                        android:onClick="pindahDashboard"
+                        android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:paddingStart="@dimen/tepi"
+                        android:paddingTop="@dimen/tepi"
+                        android:paddingEnd="@dimen/tepi">
+
+                        <RelativeLayout
+                            android:id="@+id/konten"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/merkMobil"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="(Nama Mobil)"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sebelahPanah"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/jenisMobil"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/merkMobil"
+                                android:layout_marginTop="-5dp"
+                                android:layout_marginBottom="-5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="(Jenis Mobil)" />
+
+                            <ImageView
+                                android:id="@+id/gambarMobil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/gambar"
+
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/pajero" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ketSpesifikasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/container"
+                    android:layout_marginStart="@dimen/tepi"
+                    android:layout_marginTop="@dimen/tepi"
+                    android:layout_marginEnd="@dimen/tepi"
+                    android:layout_marginBottom="@dimen/tepi">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/spesifikasi"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/hargaMobil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="(Harga Mobil)" />
+
+                    <ImageView
+                        android:id="@+id/bintang_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/hargaMobil"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="-6dp"
+                        android:src="@drawable/star_blank" />
+
+                    <ImageView
+                        android:id="@+id/bintang_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/hargaMobil"
+                        android:layout_marginTop="-6dp"
+                        android:layout_toStartOf="@id/bintang_1"
+                        android:src="@drawable/star_blank" />
+
+                    <ImageView
+                        android:id="@+id/bintang_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/hargaMobil"
+                        android:layout_marginTop="-6dp"
+                        android:layout_toStartOf="@id/bintang_2"
+                        android:src="@drawable/star_blank" />
+
+                    <ImageView
+                        android:id="@+id/bintang_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/hargaMobil"
+                        android:layout_marginTop="-6dp"
+                        android:layout_toStartOf="@id/bintang_3"
+                        android:src="@drawable/star_blank" />
+
+                    <ImageView
+                        android:id="@+id/bintang_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/hargaMobil"
+                        android:layout_marginTop="-6dp"
+                        android:layout_toStartOf="@id/bintang_4"
+                        android:src="@drawable/star_blank" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/spesifikasi2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ketSpesifikasi"
+                    android:paddingStart="@dimen/tepi"
+                    android:paddingEnd="@dimen/tepi">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/spesifikasi"
+                        android:layout_height="@dimen/spesifikasi"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/spesifikasi">
+
+                        <ImageView
+                            android:id="@+id/speedometer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:src="@drawable/bi_speedometer" />
+
+                        <TextView
+                            android:id="@+id/ketSpeedometer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_horizontal"
+                            android:text="(200km/jam)"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/spesifikasi"
+                        android:layout_height="@dimen/spesifikasi"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/spesifikasi"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:src="@drawable/fluent_transmission_20_filled"/>
+
+                        <TextView
+                            android:id="@+id/ketTransmisi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_horizontal"
+                            android:text="(Manual)"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/spesifikasi"
+                        android:layout_height="@dimen/spesifikasi"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/spesifikasi">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/mdi_engine"/>
+
+                        <TextView
+                            android:id="@+id/ketEngine"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_horizontal"
+                            android:text="(Silinder)"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/spesifikasiBawah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spesifikasi2"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="@dimen/tepi"
+                    android:paddingEnd="@dimen/tepi">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/spesifikasi"
+                        android:layout_height="@dimen/spesifikasi"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/spesifikasi">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/gas_station" />
+
+                        <TextView
+                            android:id="@+id/ketGasStation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_horizontal"
+                            android:text="(Bensin)"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/spesifikasi"
+                        android:layout_height="@dimen/spesifikasi"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/spesifikasi">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/kursi" />
+
+                        <TextView
+                            android:id="@+id/ketKursi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_horizontal"
+                            android:text="(Kursi)"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/spesifikasi"
+                        android:layout_height="@dimen/spesifikasi"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/spesifikasi">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:src="@drawable/simple_line_icons_calender" />
+
+                        <TextView
+                            android:id="@+id/ketTahun"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_horizontal"
+                            android:text="(Tahun)"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/expertRating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spesifikasiBawah"
+                    android:layout_marginStart="@dimen/tepi"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="@dimen/tepi"
+                    android:layout_marginBottom="@dimen/tepi">
+
+                    <TextView
+                        android:id="@+id/textPertama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/expert_rating"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textRincian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textPertama"
+                        android:layout_marginTop="-10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/skalah" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textRincian">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/konsumsi"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/konsumsi" />
+
+                            <TextView
+                                android:id="@+id/titikDua"
+                                android:fontFamily="@font/poppins_medium"
+                                android:paddingStart="10dp"
+                                android:text=":" />
+
+                            <ImageView
+                                android:id="@+id/blank1"
+                                android:layout_width="@dimen/lebar_rating"
+                                android:layout_height="@dimen/tinggi_rating"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/kotak_rating_warna_kiri" />
+
+                            <ImageView
+                                android:id="@+id/blank2"
+                                android:layout_width="@dimen/lebar_rating"
+                                android:layout_height="@dimen/tinggi_rating"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/kotak_rating_blank" />
+
+                            <ImageView
+                                android:id="@+id/blank3"
+                                android:layout_width="@dimen/lebar_rating"
+                                android:layout_height="@dimen/tinggi_rating"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/kotak_rating_blank" />
+
+                            <ImageView
+                                android:id="@+id/blank4"
+                                android:layout_width="@dimen/lebar_rating"
+                                android:layout_height="@dimen/tinggi_rating"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/kotak_rating_blank" />
+
+                            <ImageView
+                                android:id="@+id/blank5"
+                                android:layout_width="@dimen/lebar_rating"
+                                android:layout_height="@dimen/tinggi_rating"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/kotak_rating_blank_kanan" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/kenyamanan"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/kenyamanan" />
+
+                            <TextView
+                                android:id="@+id/titikDua1"
+                                android:fontFamily="@font/poppins_medium"
+                                android:paddingStart="10dp"
+                                android:text=":" />
+
+                            <ImageView
+                                android:id="@+id/blank6"
+                                android:layout_width="@dimen/lebar_rating"
+                                android:layout_height="@dimen/tinggi_rating"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/kotak_rating_warna_kiri" />
+
+                            <ImageView
+                                android:id="@+id/blank7"
+                                android:layout_width="@dimen/lebar_rating"
+                                android:layout_height="@dimen/tinggi_rating"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/kotak_rating_blank" />
+
+                            <ImageView
+                                android:id="@+id/blank8"
+                                android:layout_width="@dimen/lebar_rating"
+                                android:layout_height="@dimen/tinggi_rating"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/kotak_rating_blank" />
+
+                            <ImageView
+                                android:id="@+id/blank9"
+                                android:layout_width="@dimen/lebar_rating"
+                                android:layout_height="@dimen/tinggi_rating"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/kotak_rating_blank" />
+
+                            <ImageView
+                                android:id="@+id/blank10"
+                                android:layout_width="@dimen/lebar_rating"
+                                android:layout_height="@dimen/tinggi_rating"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/kotak_rating_blank_kanan" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/keamanan"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/keamanan" />
+
+                            <TextView
+                                android:id="@+id/titikDua2"
+                                android:fontFamily="@font/poppins_medium"
+                                android:paddingStart="10dp"
+                                android:text=":" />
+
+                            <ImageView
+                                android:id="@+id/blank11"
+                                android:layout_width="@dimen/lebar_rating"
+                                android:layout_height="@dimen/tinggi_rating"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/kotak_rating_warna_kiri" />
+
+                            <ImageView
+                                android:id="@+id/blank12"
+                                android:layout_width="@dimen/lebar_rating"
+                                android:layout_height="@dimen/tinggi_rating"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/kotak_rating_blank" />
+
+                            <ImageView
+                                android:id="@+id/blank13"
+                                android:layout_width="@dimen/lebar_rating"
+                                android:layout_height="@dimen/tinggi_rating"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/kotak_rating_blank" />
+
+                            <ImageView
+                                android:id="@+id/blank14"
+                                android:layout_width="@dimen/lebar_rating"
+                                android:layout_height="@dimen/tinggi_rating"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/kotak_rating_blank" />
+
+                            <ImageView
+                                android:id="@+id/blank15"
+                                android:layout_width="@dimen/lebar_rating"
+                                android:layout_height="@dimen/tinggi_rating"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/kotak_rating_blank_kanan" />
+                        </TableRow>
+                    </TableLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonLanjut"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginBottom="-8dp"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="@font/permanentmarker_regular"
+        android:onClick="pindahDashboard"
+        android:text="S e w a"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="290dp"
+        android:layout_height="280dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-130dp"
+        android:layout_marginBottom="-20dp"
+        android:src="@drawable/bulat"
+        android:translationZ="-10dp" />
+
+</RelativeLayout>

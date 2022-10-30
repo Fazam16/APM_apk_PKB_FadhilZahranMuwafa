@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="merk_mobil">22sp</dimen>
+    <dimen name="sebelahPanah">23sp</dimen>
+    <dimen name="gambar">70dp</dimen>
+    <dimen name="spesifikasi">80dp</dimen>
+    <dimen name="expertRating">5dp</dimen>
+    <dimen name="expertRatingBlok">8dp</dimen>
+    <dimen name="ratingRadius">10dp</dimen>
+    <dimen name="lebar_rating">35dp</dimen>
+    <dimen name="tinggi_rating">15dp</dimen>
+</resources>

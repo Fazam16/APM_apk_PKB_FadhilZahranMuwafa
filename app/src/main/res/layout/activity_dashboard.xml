@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard">
+
+    <ImageView
+        android:layout_width="@dimen/bulat"
+        android:layout_height="@dimen/bulat"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="-100dp"
+        android:src="@drawable/bulat" />
+
+    <ImageView
+        android:layout_width="@dimen/bulat"
+        android:layout_height="@dimen/bulat"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-130dp"
+        android:layout_marginBottom="-20dp"
+        android:src="@drawable/bulat" />
+
+    <ImageView
+        android:id="@+id/kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        android:onClick="pindaMainActivity"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="10dp"
+        android:padding="@dimen/tepi">
+
+        <RelativeLayout
+            android:id="@+id/konten"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/daftarMobil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/daftarMobil"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sebelahPanah" />
+
+            <TextView
+                android:id="@+id/pilihmobilmu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/daftarMobil"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="-5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/pilihMobilMu" />
+
+            <Button
+                android:id="@+id/matic"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/pilihmobilmu"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_radius"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/matic"
+                android:textAllCaps="false"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/manual"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/pilihmobilmu"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/matic"
+                android:background="@drawable/border_radius"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/manual"
+                android:textAllCaps="false"
+                android:textSize="10sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/matic"
+                android:layout_marginTop="15dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/tipe1"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:background="@drawable/tipe_mobil"
+                        android:elevation="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/avanza"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/merk_mobil"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="20dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/toyota"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:src="@drawable/avanza" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/hargaAvanza"
+                            android:textSize="17sp" />
+
+                        <Button
+                            android:id="@+id/buttonAvanza"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/rounded_corner"
+                            android:fontFamily="@font/permanentmarker_regular"
+                            android:text="@string/lihat"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tipe2"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/tipe_mobil"
+                        android:elevation="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/hrv"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/merk_mobil"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="20dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/honda"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:src="@drawable/hrv" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/hargaHRV"
+                            android:textSize="17sp" />
+
+                        <Button
+                            android:id="@+id/buttonHRV"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/rounded_corner"
+                            android:fontFamily="@font/permanentmarker_regular"
+                            android:text="@string/lihat"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tipe3"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/tipe_mobil"
+                        android:elevation="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/pajeroSport"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/merk_mobil"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="20dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/mitsubishi"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:src="@drawable/pajero" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/hargaPajero"
+                            android:textSize="17sp" />
+
+                        <Button
+                            android:id="@+id/buttonPajero"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/rounded_corner"
+                            android:fontFamily="@font/permanentmarker_regular"
+                            android:text="@string/lihat"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

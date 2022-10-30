@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="tagLine">Ayo Pakai Mobil !</string>
+    <string name="judulBesar">APM</string>
+    <string name="pengertian">Kamu bisa memilih mobil yang kamu inginkan dari berbagai merk</string>
+    <string name="keterangan2">AYO SEWA MOBIL BERSAMA KAMI</string>
+    <string name="keterangan1">BUTUH MOBIL ?</string>
+    <string name="daftarMobil">Daftar <b>Mobil</b></string>
+    <string name="pilihMobilMu">(Pilih Mobil Mu)</string>
+    <string name="matic">Matic</string>
+    <string name="manual">Manual</string>
+    <string name="avanza">Avanza</string>
+    <string name="toyota">Toyota</string>
+    <string name="honda">Honda</string>
+    <string name="hrv">HRV</string>
+    <string name="pajeroSport">Pajero Sport</string>
+    <string name="mitsubishi">Mitsubishi</string>
+    <string name="lihat">Lihat</string>
+    <string name="nama_aplikasi">Aplikasi Rental Mobil</string>
+    <string name="hargaAvanza">Rp. 350k/hari</string>
+    <string name="hargaHRV">Rp. 450k/hari</string>
+    <string name="hargaPajero">Rp. 500k/hari</string>
+    <string name="expert_rating">Expert Rating</string>
+    <string name="spesifikasi">Spesifikasi</string>
+    <string name="skalah">Rincian perangkat pada skala 1 sampai 5</string>
+    <string name="konsumsi">Konsumsi</string>
+    <string name="kenyamanan">kenyamanan</string>
+    <string name="keamanan">keamanan</string>
+    <string name="form_penyewaan">Form <b>Penyewaan</b></string>
+    <string name="nama_penyewa">Nama Penyewa</string>
+    <string name="nik">NIK</string>
+    <string name="alamat">Alamat</string>
+    <string name="no_wa">No. WA</string>
+    <string name="merk_mobil">Merk Mobil</string>
+    <string name="harga_sewa">Harga Sewa</string>
+    <string name="lama_sewa">Lama Sewa</string>
+
+</resources>
