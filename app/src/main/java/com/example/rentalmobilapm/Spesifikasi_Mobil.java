@@ -15,7 +15,7 @@ public class Spesifikasi_Mobil extends AppCompatActivity {
     private TextView ketSpeed, ketTransmisi, ketEngine, ketBahanBakar, ketMuatanKursi, ketTanggalPembuatan;
     private ImageView gambarMobil;
     private ImageView bintang1, bintang2, bintang3, bintang4, bintang5;
-    private ImageView blank2, blank3, blank4, blank5, blank7, blank8, blank9, blank10, blank12, blank13, blank14, blank15;
+    private ImageView blank2, blank3, blank4, blank5, blank7, blank8, blank9, blank10, blank12, blank13, blank14;
     private Button pindah;
 
     @Override
@@ -39,7 +39,6 @@ public class Spesifikasi_Mobil extends AppCompatActivity {
         ketMuatanKursi = findViewById(R.id.ketKursi);
         ketTanggalPembuatan = findViewById(R.id.ketTahun);
         pindah = findViewById(R.id.buttonLanjut);
-
 
         Bundle bundle = getIntent().getExtras();
         merk = bundle.getString("merk");
@@ -73,6 +72,7 @@ public class Spesifikasi_Mobil extends AppCompatActivity {
                 Intent pindahLokasi = new Intent(Spesifikasi_Mobil.this, Form.class);
                 pindahLokasi.putExtra("harga", harga);
                 pindahLokasi.putExtra("merk", merk);
+                pindahLokasi.putExtra("gambarMobil", gambar);
                 startActivity(pindahLokasi);
             }
         });
@@ -108,7 +108,6 @@ public class Spesifikasi_Mobil extends AppCompatActivity {
             blank12 = findViewById(R.id.blank12);blank13 = findViewById(R.id.blank13); blank14 = findViewById(R.id.blank14);
             blank12.setImageResource(rating);  blank13.setImageResource(rating); blank14.setImageResource(rating);
         }
-
     }
 
     public void bintang(String merkMobil) {

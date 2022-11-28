@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Invoice">
+
+    <ImageView
+        android:layout_width="@dimen/bulat"
+        android:layout_height="@dimen/bulat"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="-100dp"
+        android:src="@drawable/bulat" />
+
+    <ImageView
+        android:layout_width="@dimen/bulat"
+        android:layout_height="@dimen/bulat"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-130dp"
+        android:layout_marginBottom="-20dp"
+        android:src="@drawable/bulat" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/judulBesar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:paddingStart="10dp">
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-5dp"
+                        android:layout_toEndOf="@id/back"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/bukti_pembayaran"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sebelahPanah" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/gambarMobil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/judulBesar"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/gambar"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:src="@drawable/pajero" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/tepi"
+                    android:paddingRight="@dimen/tepi"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:background="@drawable/invoice"
+                        android:elevation="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:id="@+id/lembarInvoice"
+                        >
+
+                        <TableLayout
+                            android:id="@+id/table"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:elevation="@dimen/tepi">
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="@string/nama_penyewa"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="   : "
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                                <TextView
+                                    android:id="@+id/namaPenyewa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="(nama penyewa)"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="@string/nik"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="   : "
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                                <TextView
+                                    android:id="@+id/NIK"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="(NIK)"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="@string/alamat"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="   : "
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                                <TextView
+                                    android:id="@+id/alamat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="(Alamat)"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="@string/no_wa"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="   : "
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                                <TextView
+                                    android:id="@+id/noWa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="(No. WA)"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                            </TableRow>
+
+                            <TableRow android:layout_marginTop="@dimen/tepi">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="@string/merk_mobil"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="   : "
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                                <TextView
+                                    android:id="@+id/merkMobil"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="(Merk Mobil)"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="@string/harga_sewa"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="   : "
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                                <TextView
+                                    android:id="@+id/hargaSewa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="(Harga Sewa)"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="Lama Sewa"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="   : "
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                                <TextView
+                                    android:id="@+id/lamaSewa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="(Lama Sewa)"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="Tanggal Mulai"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="   : "
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                                <TextView
+                                    android:id="@+id/tanggalSewa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="(Tanggal Sewa)"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_invoice" />
+
+                            </TableRow>
+                        </TableLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/table"
+                            android:layout_marginTop="@dimen/tepi">
+
+                            <TextView
+                                android:id="@+id/uang"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/uang_pembayaran"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_invoice" />
+
+                            <TextView
+                                android:id="@+id/rp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/uang"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Rp."
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_invoice" />
+
+                            <TextView
+                                android:id="@+id/uangPembayaran"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/uang"
+                                android:layout_toEndOf="@id/rp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text=" (350K)"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_invoice" />
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/button_invoice"
+                            android:fontFamily="@font/poppins_medium"
+                            android:padding="15dp"
+                            android:text="S E L E S A I"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lembarInvoice"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/apm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="APM"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="50dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/ayoPakai"
+                            android:layout_below="@id/apm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ayo Pakai Mobil !"
+                            android:textColor="@color/abu_abu"
+                            android:layout_marginTop="-15dp"
+                            android:textSize="20dp"
+                            />
+
+                        <TextView
+                            android:layout_toEndOf="@id/ayoPakai"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Solusi dari masalah mobilitas Anda"
+                            android:textSize="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp"
+                            />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

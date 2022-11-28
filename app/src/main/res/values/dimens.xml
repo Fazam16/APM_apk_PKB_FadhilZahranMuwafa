@@ -9,4 +9,5 @@
     <dimen name="ratingRadius">10dp</dimen>
     <dimen name="lebar_rating">35dp</dimen>
     <dimen name="tinggi_rating">15dp</dimen>
+    <dimen name="font_invoice">16sp</dimen>
 </resources>

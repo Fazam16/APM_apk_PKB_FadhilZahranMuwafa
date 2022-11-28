@@ -109,12 +109,13 @@
                         android:elevation="4dp">
 
                         <TextView
+                            android:id="@+id/mobil1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/poppins_medium"
-                            android:text="@string/avanza"
+                            android:text="Xenia"
                             android:textColor="@color/black"
                             android:textSize="@dimen/merk_mobil"
                             android:textStyle="bold" />
