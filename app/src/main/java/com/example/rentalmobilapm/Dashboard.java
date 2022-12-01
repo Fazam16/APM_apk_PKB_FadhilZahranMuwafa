@@ -3,20 +3,27 @@ package com.example.rentalmobilapm;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Dashboard extends AppCompatActivity {
+public class Dashboard extends AppCompatActivity implements View.OnClickListener {
 
-    private Button buttonAvanza, buttonHRV, buttonPajero;
+    private Button buttonAvanza, buttonHRV, buttonPajero, logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_dashboard);
+
+        if(!SharedPrefManager.getInstance(this).isLoggedIn()) {
+            finish();
+            startActivity(new Intent(this, Login.class));
+        }
+
+        logout = findViewById(R.id.logout);
+        logout.setOnClickListener(this);
 
         dataMobilAvanza();
         dataMobilHRV();
@@ -97,4 +104,12 @@ public class Dashboard extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onClick(View view) {
+        if(view == logout) {
+            SharedPrefManager.getInstance(this).logout();
+            finish();
+            startActivity(new Intent(this, Login.class));
+        }
+    }
 }

@@ -14,10 +14,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar (). hide ();
         setContentView(R.layout.activity_main);
+
+        if(SharedPrefManager.getInstance(this).isLoggedIn()) {
+            finish();
+            startActivity(new Intent(this, Dashboard.class));
+            return;
+        }
     }
 
     public void pindahDashboard(View view) {
-        Intent intent = new Intent(MainActivity.this, Dashboard.class);
+        Intent intent = new Intent(this, RegisterUserAkun.class);
         startActivity(intent);
     }
 }

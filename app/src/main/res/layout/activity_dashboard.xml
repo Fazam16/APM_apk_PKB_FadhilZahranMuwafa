@@ -53,6 +53,18 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/sebelahPanah" />
 
+            <Button
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:text="Logout"
+                android:textSize="10sp"
+                android:background="@drawable/button_submit_register"
+                android:textStyle="bold"
+                android:id="@+id/logout"
+                />
+
             <TextView
                 android:id="@+id/pilihmobilmu"
                 android:layout_width="wrap_content"
