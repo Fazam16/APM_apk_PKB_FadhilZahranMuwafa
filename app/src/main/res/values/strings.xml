@@ -34,7 +34,7 @@
     <string name="merk_mobil">Merk Mobil</string>
     <string name="harga_sewa">Harga Sewa</string>
     <string name="lama_sewa">Lama Sewa</string>
-    <string name="bukti_pembayaran">Bukti <b>Pembayaran</b>></string>
+    <string name="bukti_pembayaran">Bukti <b>Pembayaran</b></string>
     <string name="uang_pembayaran">Uang Pembayaran</string>
     <string name="login_disini"><u>Login disini</u></string>
     <string name="register_disini"><u>Register disini</u></string>

@@ -372,12 +372,14 @@
                         </RelativeLayout>
 
                         <Button
+                            android:id="@+id/pindahHalaman"
                             android:layout_width="130dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
                             android:background="@drawable/button_invoice"
                             android:fontFamily="@font/poppins_medium"
+                            android:onClick="onClick"
                             android:padding="15dp"
                             android:text="S E L E S A I"
                             android:textColor="@color/black"

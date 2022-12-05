@@ -2,7 +2,9 @@ package com.example.rentalmobilapm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -39,5 +41,9 @@ public class Invoice extends AppCompatActivity {
         tanggal_sewa.setText(bundle.getString("tanggal"));
         uang_pembayaran.setText(bundle.getString("uang_pembayaran"));
         gambarMobil.setImageResource(bundle.getInt("gambarMobil"));
+    }
+
+    public void onClick(View view) {
+        startActivity(new Intent(Invoice.this, RiwayatPemesanan.class));
     }
 }
