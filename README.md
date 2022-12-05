@@ -5,3 +5,5 @@ Link Github : https://github.com/Fazam16/APM_apk_PKB_FadhilZahranMuwafa.git
 
 Ayo Pakai Mobil (APM) merupakan sebuah aplikasi berbasis android yang berguna untuk
 menyediakan penyewaan mobil secara online.
+
+Install file "app-debug.apk" pada android untuk mengoperasikan aplikasi ini
